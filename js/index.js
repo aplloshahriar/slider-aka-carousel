@@ -16,6 +16,9 @@ let imgIndex=0;
 
 const slider=document.getElementById('slider-img')
 setInterval(()=>{
+    if(imgIndex===images.length){
+        imgIndex=0;
+    }
     const imgUrl=images[imgIndex];
     console.log(imgIndex, imgUrl);
     slider.setAttribute('src',imgUrl)
